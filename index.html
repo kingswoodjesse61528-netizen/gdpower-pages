@@ -262,6 +262,17 @@ const $=s=>document.querySelector(s);
 const f1=n=>(Math.round(n*10)/10).toFixed(1);
 const hh=h=>String(h).padStart(2,'0')+':00';
 const C={blue:'#3b82f6',blueD:'#2563eb',amber:'#f59e0b',green:'#10b981',red:'#f43f5e',tx2:'#9aa7bd',line:'rgba(255,255,255,.07)'};
+// 模型特征 → 中文名（覆盖全部 35 个特征；已是中文的保持原样）
+const FEAT_CN={
+  hour:'小时',day_of_week:'星期几',month:'月份',day_of_year:'年内第几天',
+  is_weekend:'是否周末',quarter:'季度',hour_sin:'小时(正弦)',hour_cos:'小时(余弦)',
+  month_sin:'月份(正弦)',month_cos:'月份(余弦)',
+  net_load:'净负荷',west_ratio:'西电占比',renew_ratio:'新能源占比',is_hot:'高温日',is_cold:'低温日',
+  price_lag1:'前1时电价',price_lag24:'昨日同时电价',price_lag48:'前48时电价',price_lag168:'上周同时电价',
+  price_roll24_mean:'近24时均价',price_roll24_std:'近24时价格波动',price_roll168_mean:'近7日均价',
+  load_roll24_mean:'近24时均负荷'
+};
+const featCN=n=>FEAT_CN[n]||n;
 
 let DATA=null;
 
@@ -502,7 +513,7 @@ function renderModel(){
 
   const fs=m.top_features||[]; const max=fs.length?fs[0].weight:1;
   $('#features').innerHTML=fs.map(ft=>
-    '<div class="feat"><div class="fh"><span class="fn">'+ft.name+'</span><span class="fw">'+(ft.weight*100).toFixed(1)+'%</span></div>'+
+    '<div class="feat"><div class="fh"><span class="fn" title="'+ft.name+'">'+featCN(ft.name)+'</span><span class="fw">'+(ft.weight*100).toFixed(1)+'%</span></div>'+
     '<div class="bar"><i style="width:'+(ft.weight/max*100)+'%"></i></div></div>').join('');
 }
 
