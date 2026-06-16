@@ -207,6 +207,14 @@ body::before{
       <div class="card-h">24 点明细</div>
       <div class="h24" id="h24" style="max-height:none"></div>
     </div>
+
+    <div class="card" id="cmpCard2">
+      <div class="card-h">日前预测 vs 实际</div>
+      <div class="cmp-dates" id="cmpDates2"></div>
+      <div class="chart-box"><canvas id="cmpChart2"></canvas></div>
+      <div class="note" id="cmpNote2"></div>
+      <div class="chips" id="cmpChips2" style="margin-top:12px"></div>
+    </div>
   </section>
 
   <!-- 准确率 -->
@@ -402,31 +410,38 @@ function renderAcc(){
   renderCompare();
 }
 
-/* ───── 日前预测 vs 实际 对比（可切换最近几天）───── */
-let CMP_SEL=-1, cmpChartObj=null;
+/* ───── 日前预测 vs 实际 对比（可切换最近几天，双 Tab 共用同一选中日）───── */
+// 两个挂载点：准确率 Tab 与 预测 Tab；共享 CMP_SEL，切一处两处同步。
+const CMP_MOUNTS=[
+  {dates:'#cmpDates', chart:'#cmpChart', note:'#cmpNote', chips:'#cmpChips', card:'#cmpCard'},
+  {dates:'#cmpDates2',chart:'#cmpChart2',note:'#cmpNote2',chips:'#cmpChips2',card:'#cmpCard2'},
+];
+let CMP_SEL=-1; const cmpCharts={};
 function renderCompare(){
   const list=DATA.compare||[];
-  if(!list.length){
-    $('#cmpDates').innerHTML='';
-    $('#cmpNote').innerHTML='';$('#cmpChips').innerHTML='';
-    $('#cmpCard').querySelector('.chart-box').innerHTML='<div class="cmp-empty">暂无对比数据</div>';
-    return;
-  }
-  if(CMP_SEL<0||CMP_SEL>=list.length) CMP_SEL=list.length-1;   // 默认最新一天
-  $('#cmpDates').innerHTML=list.map((c,i)=>
-    '<div class="cmp-day'+(i===CMP_SEL?' on':'')+'" data-i="'+i+'">'+c.date.slice(5)+'</div>').join('');
-  $('#cmpDates').querySelectorAll('.cmp-day').forEach(el=>el.onclick=()=>{
-    CMP_SEL=+el.dataset.i; renderCompare();
+  if(list.length && (CMP_SEL<0||CMP_SEL>=list.length)) CMP_SEL=list.length-1;  // 默认最新一天
+  CMP_MOUNTS.forEach(M=>{
+    const datesEl=$(M.dates); if(!datesEl) return;          // 该挂载点不存在则跳过
+    if(!list.length){
+      datesEl.innerHTML=''; $(M.note).innerHTML=''; $(M.chips).innerHTML='';
+      $(M.card).querySelector('.chart-box').innerHTML='<div class="cmp-empty">暂无对比数据</div>';
+      return;
+    }
+    datesEl.innerHTML=list.map((c,i)=>
+      '<div class="cmp-day'+(i===CMP_SEL?' on':'')+'" data-i="'+i+'">'+c.date.slice(5)+'</div>').join('');
+    datesEl.querySelectorAll('.cmp-day').forEach(el=>el.onclick=()=>{
+      CMP_SEL=+el.dataset.i; renderCompare();              // 同步刷新所有挂载点
+    });
+    drawCompare(list[CMP_SEL], M);
   });
-  drawCompare(list[CMP_SEL]);
 }
-function drawCompare(c){
+function drawCompare(c, M){
   const m=c.metrics, labels=c.hours.map(h=>hh(h.hour));
   const pred=c.hours.map(h=>h.pred), actual=c.hours.map(h=>h.actual);
   const ptR=c.hours.map(h=>h.hour===m.mxh?5:0);
   const ptC=c.hours.map(()=>C.red);
-  if(cmpChartObj) cmpChartObj.destroy();
-  cmpChartObj=new Chart($('#cmpChart'),{
+  if(cmpCharts[M.chart]) cmpCharts[M.chart].destroy();
+  cmpCharts[M.chart]=new Chart($(M.chart),{
     type:'line',
     data:{labels,datasets:[
       {label:'日前预测',data:pred,borderColor:C.blue,borderWidth:2.2,tension:.35,fill:false,
@@ -447,10 +462,10 @@ function drawCompare(c){
       })
     })
   });
-  $('#cmpNote').innerHTML='<span style="color:'+C.blue+'">━</span> 日前预测　<span style="color:'+C.green+'">━</span> 日前实际　红色阴影=偏差，<span style="color:'+C.red+'">●</span> 最大偏差 '+f1(m.mxd)+'（'+hh(m.mxh)+'）';
+  $(M.note).innerHTML='<span style="color:'+C.blue+'">━</span> 日前预测　<span style="color:'+C.green+'">━</span> 日前实际　红色阴影=偏差，<span style="color:'+C.red+'">●</span> 最大偏差 '+f1(m.mxd)+'（'+hh(m.mxh)+'）';
   const gColor=m.grade==='优'?C.green:m.grade==='良'?C.blue:m.grade==='一般'?C.amber:C.red;
   const biasUp=m.bias>0;
-  $('#cmpChips').innerHTML=[
+  $(M.chips).innerHTML=[
     ['MAE',f1(m.mae),'元/MWh',C.blue],
     ['MAPE',f1(m.mape)+'%','百分比',C.amber],
     ['评级',m.grade,'',gColor],
