@@ -122,6 +122,13 @@ body::before{
 /* ── 准确率汇总 ── */
 .acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .acc-grid .chip .v{font-size:24px}
+/* ── 对比图日期切换 ── */
+.cmp-dates{display:flex;gap:7px;overflow-x:auto;padding:2px 0 10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.cmp-dates::-webkit-scrollbar{display:none}
+.cmp-day{flex:0 0 auto;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--tx2);padding:6px 11px;border-radius:10px;border:1px solid var(--card-bd);background:rgba(255,255,255,.03);cursor:pointer;transition:.2s;white-space:nowrap}
+.cmp-day.on{color:#fff;background:linear-gradient(145deg,var(--blue),var(--blue-d));border-color:transparent;box-shadow:0 4px 12px rgba(37,99,235,.4)}
+.cmp-empty{text-align:center;color:var(--tx3);font-size:13px;padding:40px 0}
+
 .pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px}
 .pill.正常{color:var(--green);background:rgba(16,185,129,.14)}
 .pill.注意{color:var(--amber);background:rgba(245,158,11,.14)}
@@ -204,6 +211,13 @@ body::before{
 
   <!-- 准确率 -->
   <section id="acc" class="view hidden">
+    <div class="card" id="cmpCard">
+      <div class="card-h">日前预测 vs 实际</div>
+      <div class="cmp-dates" id="cmpDates"></div>
+      <div class="chart-box"><canvas id="cmpChart"></canvas></div>
+      <div class="note" id="cmpNote"></div>
+      <div class="chips" id="cmpChips" style="margin-top:12px"></div>
+    </div>
     <div class="card">
       <div class="card-h">模型近况</div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:13px">
@@ -385,7 +399,68 @@ function renderAcc(){
   }).join('');
 
   drawAccChart();
+  renderCompare();
 }
+
+/* ───── 日前预测 vs 实际 对比（可切换最近几天）───── */
+let CMP_SEL=-1, cmpChartObj=null;
+function renderCompare(){
+  const list=DATA.compare||[];
+  if(!list.length){
+    $('#cmpDates').innerHTML='';
+    $('#cmpNote').innerHTML='';$('#cmpChips').innerHTML='';
+    $('#cmpCard').querySelector('.chart-box').innerHTML='<div class="cmp-empty">暂无对比数据</div>';
+    return;
+  }
+  if(CMP_SEL<0||CMP_SEL>=list.length) CMP_SEL=list.length-1;   // 默认最新一天
+  $('#cmpDates').innerHTML=list.map((c,i)=>
+    '<div class="cmp-day'+(i===CMP_SEL?' on':'')+'" data-i="'+i+'">'+c.date.slice(5)+'</div>').join('');
+  $('#cmpDates').querySelectorAll('.cmp-day').forEach(el=>el.onclick=()=>{
+    CMP_SEL=+el.dataset.i; renderCompare();
+  });
+  drawCompare(list[CMP_SEL]);
+}
+function drawCompare(c){
+  const m=c.metrics, labels=c.hours.map(h=>hh(h.hour));
+  const pred=c.hours.map(h=>h.pred), actual=c.hours.map(h=>h.actual);
+  const ptR=c.hours.map(h=>h.hour===m.mxh?5:0);
+  const ptC=c.hours.map(()=>C.red);
+  if(cmpChartObj) cmpChartObj.destroy();
+  cmpChartObj=new Chart($('#cmpChart'),{
+    type:'line',
+    data:{labels,datasets:[
+      {label:'日前预测',data:pred,borderColor:C.blue,borderWidth:2.2,tension:.35,fill:false,
+        pointRadius:0,pointHoverRadius:4},
+      {label:'日前实际',data:actual,borderColor:C.green,borderWidth:2.2,tension:.35,
+        fill:'-1',backgroundColor:'rgba(244,63,94,.10)',
+        pointRadius:ptR,pointBackgroundColor:ptC,pointBorderColor:'#fff',pointBorderWidth:1.5,
+        pointHoverRadius:5}
+    ]},
+    options:Object.assign(baseChart({yTitle:'元/MWh'}),{
+      plugins:Object.assign(baseChart({yTitle:'元/MWh'}).plugins,{
+        legend:{display:true,position:'top',align:'end',
+          labels:{color:C.tx2,font:{size:11},boxWidth:14,boxHeight:3,usePointStyle:false}},
+        tooltip:{backgroundColor:'rgba(13,20,36,.95)',borderColor:'rgba(59,130,246,.4)',borderWidth:1,
+          titleColor:'#eaf0fa',bodyColor:'#9aa7bd',padding:10,cornerRadius:9,
+          titleFont:{family:'IBM Plex Mono'},bodyFont:{family:'IBM Plex Mono'},
+          callbacks:{label:c=>' '+c.dataset.label+'  '+f1(c.parsed.y)+' 元/MWh'}}
+      })
+    })
+  });
+  $('#cmpNote').innerHTML='<span style="color:'+C.blue+'">━</span> 日前预测　<span style="color:'+C.green+'">━</span> 日前实际　红色阴影=偏差，<span style="color:'+C.red+'">●</span> 最大偏差 '+f1(m.mxd)+'（'+hh(m.mxh)+'）';
+  const gColor=m.grade==='优'?C.green:m.grade==='良'?C.blue:m.grade==='一般'?C.amber:C.red;
+  const biasUp=m.bias>0;
+  $('#cmpChips').innerHTML=[
+    ['MAE',f1(m.mae),'元/MWh',C.blue],
+    ['MAPE',f1(m.mape)+'%','百分比',C.amber],
+    ['评级',m.grade,'',gColor],
+    ['最大偏差',f1(m.mxd),hh(m.mxh),C.red],
+    ['预测均价',f1(m.pred_avg),'元/MWh',C.blue],
+    ['实际均价',f1(m.act_avg),'元/MWh',C.green],
+  ].map(([k,v,s,col])=>'<div class="chip"><div class="k">'+k+'</div><div class="v" style="color:'+col+';font-size:'+(k==='评级'?'17px':'19px')+'">'+v+'</div><div class="s">'+s+'</div></div>').join('')
+   +'<div class="chip" style="grid-column:span 3"><div class="k">整体方向</div><div class="v" style="color:'+(biasUp?C.red:C.green)+';font-size:16px">'+m.direction+' 元/MWh</div></div>';
+}
+
 function drawAccChart(){
   const a=DATA.accuracy;
   const labels=a.records.map(r=>r.date.slice(5));
