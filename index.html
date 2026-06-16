@@ -207,14 +207,6 @@ body::before{
       <div class="card-h">24 点明细</div>
       <div class="h24" id="h24" style="max-height:none"></div>
     </div>
-
-    <div class="card" id="cmpCard2">
-      <div class="card-h">日前预测 vs 实际</div>
-      <div class="cmp-dates" id="cmpDates2"></div>
-      <div class="chart-box"><canvas id="cmpChart2"></canvas></div>
-      <div class="note" id="cmpNote2"></div>
-      <div class="chips" id="cmpChips2" style="margin-top:12px"></div>
-    </div>
   </section>
 
   <!-- 准确率 -->
@@ -411,10 +403,9 @@ function renderAcc(){
 }
 
 /* ───── 日前预测 vs 实际 对比（可切换最近几天，双 Tab 共用同一选中日）───── */
-// 两个挂载点：准确率 Tab 与 预测 Tab；共享 CMP_SEL，切一处两处同步。
+// 挂载点（仅准确率 Tab；泛化结构保留，便于以后增减）。
 const CMP_MOUNTS=[
   {dates:'#cmpDates', chart:'#cmpChart', note:'#cmpNote', chips:'#cmpChips', card:'#cmpCard'},
-  {dates:'#cmpDates2',chart:'#cmpChart2',note:'#cmpNote2',chips:'#cmpChips2',card:'#cmpCard2'},
 ];
 let CMP_SEL=-1; const cmpCharts={};
 function renderCompare(){
