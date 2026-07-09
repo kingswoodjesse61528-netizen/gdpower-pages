@@ -1,7 +1,7 @@
 /* 广东电力日前电价 PWA · service worker
    壳资源缓存优先；data.json 走 network-first（离线回退上次缓存）。
    改版时把 VER 加一位，强制刷新缓存。 */
-const VER = 'gdpower-v5';
+const VER = 'gdpower-v6';
 const SHELL = [
   './',
   './index.html',
