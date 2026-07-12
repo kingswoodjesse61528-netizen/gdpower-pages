@@ -12,8 +12,10 @@
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<!-- Google Fonts 改为非阻塞加载：大陆网络若访问不到 fonts.googleapis.com，也不会卡住首屏，系统字体先顶上 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<!-- Chart.js 改用本地 vendor，彻底摆脱大陆被墙的 Cloudflare cdnjs 硬依赖 -->
+<script src="./vendor/chart.umd.js"></script>
 <style>
 :root{
   --bg:#0a0f1c; --bg2:#0d1424; --line:rgba(255,255,255,.07);
