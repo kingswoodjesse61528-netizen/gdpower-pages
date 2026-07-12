@@ -1,6 +1,6 @@
 {
   "name": "广东电力 · 日前电价预测",
-  "short_name": "日前电价",
+  "short_name": "广东电价",
   "description": "广东电力市场日前电价预测 · 手机只读看板",
   "lang": "zh-CN",
   "start_url": "./index.html",
@@ -10,8 +10,8 @@
   "background_color": "#0a0f1c",
   "theme_color": "#0a0f1c",
   "icons": [
-    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "./icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "./icons/icon-192-v2.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512-v2.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-maskable-512-v2.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
