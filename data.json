@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-04T11:11:25",
+    "generated_at": "2026-08-04T19:41:32",
     "machine": "mini",
     "data_date": "2026-08-04",
     "pred_date": "2026-08-05"
@@ -195,56 +195,6 @@
   },
   "accuracy": {
     "records": [
-      {
-        "date": "2026-06-28",
-        "mae": 97.87,
-        "mape": 25.86,
-        "peak_error": 154.08,
-        "valley_error": 11.98,
-        "status": "退化",
-        "rmae": 0.616,
-        "smape": 22.47
-      },
-      {
-        "date": "2026-06-29",
-        "mae": 38.47,
-        "mape": 9.47,
-        "peak_error": 98.2,
-        "valley_error": 5.43,
-        "status": "正常",
-        "rmae": 0.889,
-        "smape": 9.5
-      },
-      {
-        "date": "2026-06-30",
-        "mae": 30.61,
-        "mape": 8.13,
-        "peak_error": 65.01,
-        "valley_error": 0.4,
-        "status": "正常",
-        "rmae": 0.795,
-        "smape": 8.02
-      },
-      {
-        "date": "2026-07-01",
-        "mae": 47.5,
-        "mape": 10.21,
-        "peak_error": 204.52,
-        "valley_error": 3.76,
-        "status": "正常",
-        "rmae": 1.443,
-        "smape": 11.21
-      },
-      {
-        "date": "2026-07-02",
-        "mae": 38.91,
-        "mape": 8.78,
-        "peak_error": 150.73,
-        "valley_error": 1.48,
-        "status": "正常",
-        "rmae": 1.186,
-        "smape": 9.13
-      },
       {
         "date": "2026-07-03",
         "mae": 35.9,
@@ -476,6 +426,16 @@
         "smape": 7.95
       },
       {
+        "date": "2026-07-29",
+        "mae": 23.43,
+        "mape": 6.14,
+        "peak_error": 72.44,
+        "valley_error": 1.33,
+        "status": "正常",
+        "rmae": 1.479,
+        "smape": 6.38
+      },
+      {
         "date": "2026-07-30",
         "mae": 14.42,
         "mape": 4.1,
@@ -484,6 +444,46 @@
         "status": "正常",
         "rmae": 0.747,
         "smape": 3.97
+      },
+      {
+        "date": "2026-07-31",
+        "mae": 28.94,
+        "mape": 7.71,
+        "peak_error": 83.28,
+        "valley_error": 0.12,
+        "status": "正常",
+        "rmae": 1.939,
+        "smape": 8.12
+      },
+      {
+        "date": "2026-08-01",
+        "mae": 20.85,
+        "mape": 6.68,
+        "peak_error": 58.57,
+        "valley_error": 0.69,
+        "status": "正常",
+        "rmae": 0.667,
+        "smape": 6.34
+      },
+      {
+        "date": "2026-08-02",
+        "mae": 38.92,
+        "mape": 15.15,
+        "peak_error": 100.78,
+        "valley_error": 7.96,
+        "status": "正常",
+        "rmae": 1.217,
+        "smape": 13.32
+      },
+      {
+        "date": "2026-08-03",
+        "mae": 21.17,
+        "mape": 5.96,
+        "peak_error": 59.7,
+        "valley_error": 0.46,
+        "status": "正常",
+        "rmae": 0.462,
+        "smape": 6.27
       },
       {
         "date": "2026-08-04",
@@ -497,14 +497,14 @@
       }
     ],
     "summary": {
-      "avg_mae_30": 45.3,
-      "avg_mae_7": 55.5,
-      "avg_rmae_7": 1.051,
+      "avg_mae_30": 41.3,
+      "avg_mae_7": 24.9,
+      "avg_rmae_7": 1.118,
       "best_day": "2026-07-30",
       "best_mae": 14.42,
       "worst_day": "2026-07-26",
       "worst_mae": 148.56,
-      "model_status": "注意"
+      "model_status": "正常"
     }
   },
   "model": {
