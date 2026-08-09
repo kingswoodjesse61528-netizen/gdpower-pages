@@ -1,193 +1,193 @@
 {
   "meta": {
-    "generated_at": "2026-08-08T13:00:22",
+    "generated_at": "2026-08-09T12:01:02",
     "machine": "Air",
-    "data_date": "2026-08-08",
-    "pred_date": "2026-08-09"
+    "data_date": "2026-08-09",
+    "pred_date": "2026-08-10"
   },
   "prediction": {
-    "date": "2026-08-09",
+    "date": "2026-08-10",
     "hours": [
       {
         "hour": 0,
-        "price": 457.5,
-        "lower": 368.8,
-        "upper": 546.2,
+        "price": 487.5,
+        "lower": 450.0,
+        "upper": 524.9,
         "risk": "🟡中价"
       },
       {
         "hour": 1,
-        "price": 394.3,
-        "lower": 326.7,
-        "upper": 462.0,
-        "risk": ""
+        "price": 403.5,
+        "lower": 370.5,
+        "upper": 436.5,
+        "risk": "🟡中价"
       },
       {
         "hour": 2,
-        "price": 380.4,
-        "lower": 325.6,
-        "upper": 435.1,
+        "price": 392.4,
+        "lower": 364.0,
+        "upper": 420.8,
         "risk": ""
       },
       {
         "hour": 3,
-        "price": 377.7,
-        "lower": 340.3,
-        "upper": 415.1,
+        "price": 391.7,
+        "lower": 365.5,
+        "upper": 417.9,
         "risk": ""
       },
       {
         "hour": 4,
-        "price": 372.3,
-        "lower": 342.6,
-        "upper": 402.0,
+        "price": 387.7,
+        "lower": 358.4,
+        "upper": 417.1,
         "risk": ""
       },
       {
         "hour": 5,
-        "price": 375.9,
-        "lower": 341.9,
-        "upper": 409.9,
+        "price": 399.6,
+        "lower": 352.3,
+        "upper": 446.9,
         "risk": ""
       },
       {
         "hour": 6,
-        "price": 382.8,
-        "lower": 352.1,
-        "upper": 413.4,
-        "risk": ""
+        "price": 412.5,
+        "lower": 381.3,
+        "upper": 443.7,
+        "risk": "🟡中价"
       },
       {
         "hour": 7,
-        "price": 378.4,
-        "lower": 352.0,
-        "upper": 404.8,
-        "risk": ""
+        "price": 403.2,
+        "lower": 367.8,
+        "upper": 438.7,
+        "risk": "🟡中价"
       },
       {
         "hour": 8,
-        "price": 401.3,
-        "lower": 364.0,
-        "upper": 438.5,
+        "price": 417.6,
+        "lower": 388.3,
+        "upper": 446.9,
         "risk": "🟡中价"
       },
       {
         "hour": 9,
-        "price": 413.8,
-        "lower": 383.6,
-        "upper": 443.9,
+        "price": 430.3,
+        "lower": 403.2,
+        "upper": 457.4,
         "risk": "🟡中价"
       },
       {
         "hour": 10,
-        "price": 362.5,
-        "lower": 335.8,
-        "upper": 389.2,
+        "price": 372.9,
+        "lower": 339.4,
+        "upper": 406.3,
         "risk": ""
       },
       {
         "hour": 11,
-        "price": 409.3,
-        "lower": 368.8,
-        "upper": 449.8,
+        "price": 408.3,
+        "lower": 368.5,
+        "upper": 448.1,
         "risk": "🟡中价"
       },
       {
         "hour": 12,
-        "price": 359.6,
-        "lower": 332.0,
-        "upper": 387.2,
+        "price": 375.2,
+        "lower": 336.0,
+        "upper": 414.3,
         "risk": ""
       },
       {
         "hour": 13,
-        "price": 424.3,
-        "lower": 381.2,
-        "upper": 467.4,
+        "price": 442.2,
+        "lower": 404.4,
+        "upper": 480.1,
         "risk": "🟡中价"
       },
       {
         "hour": 14,
-        "price": 380.5,
-        "lower": 353.2,
-        "upper": 407.8,
+        "price": 386.7,
+        "lower": 347.8,
+        "upper": 425.6,
         "risk": ""
       },
       {
         "hour": 15,
-        "price": 405.0,
-        "lower": 360.4,
-        "upper": 449.6,
+        "price": 420.0,
+        "lower": 390.3,
+        "upper": 449.7,
         "risk": "🟡中价"
       },
       {
         "hour": 16,
-        "price": 445.7,
-        "lower": 399.6,
-        "upper": 491.8,
+        "price": 453.0,
+        "lower": 426.2,
+        "upper": 479.9,
         "risk": "🟡中价"
       },
       {
         "hour": 17,
-        "price": 447.8,
-        "lower": 403.5,
-        "upper": 492.1,
+        "price": 447.7,
+        "lower": 414.9,
+        "upper": 480.5,
         "risk": "🟡中价"
       },
       {
         "hour": 18,
-        "price": 398.0,
-        "lower": 333.6,
-        "upper": 462.4,
-        "risk": ""
+        "price": 405.5,
+        "lower": 378.9,
+        "upper": 432.2,
+        "risk": "🟡中价"
       },
       {
         "hour": 19,
-        "price": 477.9,
-        "lower": 429.9,
-        "upper": 525.8,
+        "price": 500.0,
+        "lower": 458.4,
+        "upper": 541.6,
         "risk": "🟡中价"
       },
       {
         "hour": 20,
         "price": 417.4,
-        "lower": 361.2,
-        "upper": 473.6,
+        "lower": 388.1,
+        "upper": 446.7,
         "risk": "🟡中价"
       },
       {
         "hour": 21,
-        "price": 412.4,
-        "lower": 341.5,
-        "upper": 483.3,
+        "price": 413.8,
+        "lower": 377.8,
+        "upper": 449.7,
         "risk": "🟡中价"
       },
       {
         "hour": 22,
-        "price": 406.8,
-        "lower": 339.0,
-        "upper": 474.5,
+        "price": 404.8,
+        "lower": 377.2,
+        "upper": 432.4,
         "risk": "🟡中价"
       },
       {
         "hour": 23,
-        "price": 377.1,
-        "lower": 308.4,
-        "upper": 445.9,
+        "price": 382.5,
+        "lower": 355.0,
+        "upper": 410.0,
         "risk": ""
       }
     ],
     "metrics": {
-      "avg": 402.4,
+      "avg": 414.8,
       "pk_h": 19,
-      "pk_v": 477.9,
-      "vl_h": 12,
-      "vl_v": 359.6,
-      "spread": 118.3,
-      "ratio": 1.33,
-      "sigma": 30.9,
-      "vol": 7.7,
-      "low_win": "12:00",
+      "pk_v": 500.0,
+      "vl_h": 10,
+      "vl_v": 372.9,
+      "spread": 127.1,
+      "ratio": 1.34,
+      "sigma": 32.2,
+      "vol": 7.8,
+      "low_win": "10:00-12:00",
       "curve": "平盘偏强",
       "arb": "套利空间有限",
       "focus": "19:00晚峰高点"
@@ -195,16 +195,6 @@
   },
   "accuracy": {
     "records": [
-      {
-        "date": "2026-07-10",
-        "mae": 64.44,
-        "mape": 14.07,
-        "peak_error": 225.63,
-        "valley_error": 2.76,
-        "status": "注意",
-        "rmae": 1.638,
-        "smape": 15.3
-      },
       {
         "date": "2026-07-11",
         "mae": 95.46,
@@ -494,50 +484,60 @@
         "status": "退化",
         "rmae": 2.327,
         "smape": 21.76
+      },
+      {
+        "date": "2026-08-09",
+        "mae": 78.9,
+        "mape": 23.26,
+        "peak_error": 235.92,
+        "valley_error": 1.22,
+        "status": "退化",
+        "rmae": 1.363,
+        "smape": 20.86
       }
     ],
     "summary": {
-      "avg_mae_30": 49.8,
-      "avg_mae_7": 50.5,
-      "avg_rmae_7": 1.654,
+      "avg_mae_30": 50.3,
+      "avg_mae_7": 56.2,
+      "avg_rmae_7": 1.675,
       "best_day": "2026-07-28",
       "best_mae": 19.02,
       "worst_day": "2026-07-26",
       "worst_mae": 152.69,
-      "model_status": "正常"
+      "model_status": "注意"
     }
   },
   "model": {
     "version": "v3.1_retrained_tuned",
-    "trained_at": "2026-08-07T18:00:12.577385",
+    "trained_at": "2026-08-08T18:00:12.318347",
     "best_scheme": "集成模型（XGBoost + LightGBM）",
     "feature_count": 38,
-    "train_period": "2025-01-08 ~ 2026-08-04",
+    "train_period": "2025-01-08 ~ 2026-08-05",
     "test_metrics": {
-      "mae": 22.32,
-      "rmse": 41.01,
-      "mape": 5.49
+      "mae": 27.77,
+      "rmse": 50.97,
+      "mape": 6.22
     },
     "top_features": [
       {
         "name": "price_lag1",
-        "weight": 0.3061
+        "weight": 0.3014
       },
       {
         "name": "price_lag24",
-        "weight": 0.0665
+        "weight": 0.0668
       },
       {
         "name": "hour_cos",
-        "weight": 0.0432
+        "weight": 0.044
       },
       {
         "name": "hour",
-        "weight": 0.0391
+        "weight": 0.0404
       },
       {
         "name": "日前B类负荷",
-        "weight": 0.0356
+        "weight": 0.0361
       },
       {
         "name": "price_lag48",
@@ -545,53 +545,23 @@
       },
       {
         "name": "hour_sin",
-        "weight": 0.0318
+        "weight": 0.0303
       },
       {
         "name": "load_roll24_mean",
-        "weight": 0.0232
+        "weight": 0.0244
       },
       {
-        "name": "price_lag72",
-        "weight": 0.0232
+        "name": "month_sin",
+        "weight": 0.024
       },
       {
-        "name": "price_lag168",
-        "weight": 0.0228
+        "name": "net_load",
+        "weight": 0.0234
       }
     ]
   },
   "history": [
-    {
-      "date": "2026-08-03",
-      "avg": 319.9,
-      "prices": [
-        330.7,
-        301.7,
-        300.1,
-        301.1,
-        299.8,
-        308.3,
-        317.7,
-        314.1,
-        336.3,
-        337.5,
-        310.7,
-        322.1,
-        307.8,
-        334.7,
-        314.4,
-        324.3,
-        345.3,
-        341.8,
-        320.1,
-        349.4,
-        326.1,
-        319.0,
-        314.0,
-        301.4
-      ]
-    },
     {
       "date": "2026-08-04",
       "avg": 329.5,
@@ -744,172 +714,66 @@
     },
     {
       "date": "2026-08-09",
-      "avg": 402.4,
+      "avg": 399.4,
       "prices": [
-        457.5,
-        394.3,
-        380.4,
-        377.7,
-        372.3,
-        375.9,
-        382.8,
-        378.4,
-        401.3,
-        413.8,
-        362.5,
-        409.3,
-        359.6,
-        424.3,
-        380.5,
-        405.0,
-        445.7,
-        447.8,
-        398.0,
-        477.9,
-        417.4,
-        412.4,
+        453.6,
+        391.1,
+        379.7,
+        376.9,
+        370.7,
+        373.1,
+        381.1,
+        376.8,
+        396.1,
         406.8,
-        377.1
+        352.7,
+        392.8,
+        352.2,
+        422.8,
+        382.6,
+        397.1,
+        449.3,
+        439.0,
+        391.7,
+        477.8,
+        421.2,
+        411.4,
+        409.7,
+        379.4
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "avg": 414.8,
+      "prices": [
+        487.5,
+        403.5,
+        392.4,
+        391.7,
+        387.7,
+        399.6,
+        412.5,
+        403.2,
+        417.6,
+        430.3,
+        372.9,
+        408.3,
+        375.2,
+        442.2,
+        386.7,
+        420.0,
+        453.0,
+        447.7,
+        405.5,
+        500.0,
+        417.4,
+        413.8,
+        404.8,
+        382.5
       ]
     }
   ],
   "compare": [
-    {
-      "date": "2026-08-02",
-      "hours": [
-        {
-          "hour": 0,
-          "pred": 366.3,
-          "actual": 342.9
-        },
-        {
-          "hour": 1,
-          "pred": 321.2,
-          "actual": 331.3
-        },
-        {
-          "hour": 2,
-          "pred": 310.7,
-          "actual": 321.0
-        },
-        {
-          "hour": 3,
-          "pred": 310.0,
-          "actual": 318.1
-        },
-        {
-          "hour": 4,
-          "pred": 309.9,
-          "actual": 301.9
-        },
-        {
-          "hour": 5,
-          "pred": 313.0,
-          "actual": 292.1
-        },
-        {
-          "hour": 6,
-          "pred": 318.3,
-          "actual": 295.6
-        },
-        {
-          "hour": 7,
-          "pred": 316.2,
-          "actual": 270.8
-        },
-        {
-          "hour": 8,
-          "pred": 329.6,
-          "actual": 243.7
-        },
-        {
-          "hour": 9,
-          "pred": 334.3,
-          "actual": 240.2
-        },
-        {
-          "hour": 10,
-          "pred": 311.4,
-          "actual": 210.6
-        },
-        {
-          "hour": 11,
-          "pred": 320.0,
-          "actual": 219.6
-        },
-        {
-          "hour": 12,
-          "pred": 311.3,
-          "actual": 230.7
-        },
-        {
-          "hour": 13,
-          "pred": 337.4,
-          "actual": 262.2
-        },
-        {
-          "hour": 14,
-          "pred": 318.8,
-          "actual": 263.2
-        },
-        {
-          "hour": 15,
-          "pred": 326.3,
-          "actual": 284.5
-        },
-        {
-          "hour": 16,
-          "pred": 341.6,
-          "actual": 301.2
-        },
-        {
-          "hour": 17,
-          "pred": 351.3,
-          "actual": 328.9
-        },
-        {
-          "hour": 18,
-          "pred": 323.0,
-          "actual": 333.6
-        },
-        {
-          "hour": 19,
-          "pred": 357.3,
-          "actual": 344.8
-        },
-        {
-          "hour": 20,
-          "pred": 338.4,
-          "actual": 347.2
-        },
-        {
-          "hour": 21,
-          "pred": 328.0,
-          "actual": 348.8
-        },
-        {
-          "hour": 22,
-          "pred": 320.2,
-          "actual": 336.3
-        },
-        {
-          "hour": 23,
-          "pred": 308.7,
-          "actual": 327.9
-        }
-      ],
-      "metrics": {
-        "mae": 38.9,
-        "mape": 15.1,
-        "mxh": 10,
-        "mxd": 100.8,
-        "pred_avg": 326.0,
-        "act_avg": 295.7,
-        "bias": 30.3,
-        "grade": "优",
-        "direction": "整体高估 30.3"
-      }
-    },
     {
       "date": "2026-08-03",
       "hours": [
@@ -1724,6 +1588,142 @@
         "bias": -29.6,
         "grade": "偏差大",
         "direction": "整体低估 29.6"
+      }
+    },
+    {
+      "date": "2026-08-09",
+      "hours": [
+        {
+          "hour": 0,
+          "pred": 453.6,
+          "actual": 689.5
+        },
+        {
+          "hour": 1,
+          "pred": 391.1,
+          "actual": 482.6
+        },
+        {
+          "hour": 2,
+          "pred": 379.7,
+          "actual": 415.3
+        },
+        {
+          "hour": 3,
+          "pred": 376.9,
+          "actual": 375.7
+        },
+        {
+          "hour": 4,
+          "pred": 370.7,
+          "actual": 356.3
+        },
+        {
+          "hour": 5,
+          "pred": 373.1,
+          "actual": 346.9
+        },
+        {
+          "hour": 6,
+          "pred": 381.1,
+          "actual": 342.2
+        },
+        {
+          "hour": 7,
+          "pred": 376.8,
+          "actual": 312.4
+        },
+        {
+          "hour": 8,
+          "pred": 396.1,
+          "actual": 261.6
+        },
+        {
+          "hour": 9,
+          "pred": 406.8,
+          "actual": 248.0
+        },
+        {
+          "hour": 10,
+          "pred": 352.7,
+          "actual": 243.5
+        },
+        {
+          "hour": 11,
+          "pred": 392.8,
+          "actual": 263.2
+        },
+        {
+          "hour": 12,
+          "pred": 352.2,
+          "actual": 274.9
+        },
+        {
+          "hour": 13,
+          "pred": 422.8,
+          "actual": 295.0
+        },
+        {
+          "hour": 14,
+          "pred": 382.6,
+          "actual": 273.7
+        },
+        {
+          "hour": 15,
+          "pred": 397.1,
+          "actual": 300.5
+        },
+        {
+          "hour": 16,
+          "pred": 449.3,
+          "actual": 351.1
+        },
+        {
+          "hour": 17,
+          "pred": 439.0,
+          "actual": 420.0
+        },
+        {
+          "hour": 18,
+          "pred": 391.7,
+          "actual": 400.9
+        },
+        {
+          "hour": 19,
+          "pred": 477.8,
+          "actual": 495.4
+        },
+        {
+          "hour": 20,
+          "pred": 421.2,
+          "actual": 471.9
+        },
+        {
+          "hour": 21,
+          "pred": 411.4,
+          "actual": 500.6
+        },
+        {
+          "hour": 22,
+          "pred": 409.7,
+          "actual": 513.6
+        },
+        {
+          "hour": 23,
+          "pred": 379.4,
+          "actual": 434.5
+        }
+      ],
+      "metrics": {
+        "mae": 78.9,
+        "mape": 23.3,
+        "mxh": 0,
+        "mxd": 235.9,
+        "pred_avg": 399.4,
+        "act_avg": 377.9,
+        "bias": 21.5,
+        "grade": "一般",
+        "direction": "整体高估 21.5"
       }
     }
   ]
