@@ -1755,6 +1755,142 @@
         "grade": "优",
         "direction": "整体低估 11.6"
       }
+    },
+    {
+      "date": "2026-08-23",
+      "hours": [
+        {
+          "hour": 0,
+          "pred": 434.6,
+          "actual": 531.6
+        },
+        {
+          "hour": 1,
+          "pred": 415.0,
+          "actual": 457.8
+        },
+        {
+          "hour": 2,
+          "pred": 380.2,
+          "actual": 433.3
+        },
+        {
+          "hour": 3,
+          "pred": 324.3,
+          "actual": 391.2
+        },
+        {
+          "hour": 4,
+          "pred": 310.4,
+          "actual": 376.5
+        },
+        {
+          "hour": 5,
+          "pred": 306.2,
+          "actual": 366.9
+        },
+        {
+          "hour": 6,
+          "pred": 315.8,
+          "actual": 367.4
+        },
+        {
+          "hour": 7,
+          "pred": 334.8,
+          "actual": 358.5
+        },
+        {
+          "hour": 8,
+          "pred": 356.1,
+          "actual": 341.2
+        },
+        {
+          "hour": 9,
+          "pred": 366.5,
+          "actual": 337.1
+        },
+        {
+          "hour": 10,
+          "pred": 342.1,
+          "actual": 334.9
+        },
+        {
+          "hour": 11,
+          "pred": 347.2,
+          "actual": 338.1
+        },
+        {
+          "hour": 12,
+          "pred": 332.0,
+          "actual": 369.1
+        },
+        {
+          "hour": 13,
+          "pred": 385.4,
+          "actual": 381.4
+        },
+        {
+          "hour": 14,
+          "pred": 358.6,
+          "actual": 367.8
+        },
+        {
+          "hour": 15,
+          "pred": 370.1,
+          "actual": 370.4
+        },
+        {
+          "hour": 16,
+          "pred": 393.1,
+          "actual": 399.4
+        },
+        {
+          "hour": 17,
+          "pred": 429.6,
+          "actual": 434.9
+        },
+        {
+          "hour": 18,
+          "pred": 431.6,
+          "actual": 433.3
+        },
+        {
+          "hour": 19,
+          "pred": 463.1,
+          "actual": 452.9
+        },
+        {
+          "hour": 20,
+          "pred": 440.2,
+          "actual": 446.3
+        },
+        {
+          "hour": 21,
+          "pred": 430.6,
+          "actual": 447.8
+        },
+        {
+          "hour": 22,
+          "pred": 402.9,
+          "actual": 438.2
+        },
+        {
+          "hour": 23,
+          "pred": 380.6,
+          "actual": 406.6
+        }
+      ],
+      "metrics": {
+        "mae": 28.4,
+        "mape": 7.0,
+        "mxh": 0,
+        "mxd": 97.0,
+        "pred_avg": 377.1,
+        "act_avg": 399.3,
+        "bias": -22.2,
+        "grade": "优",
+        "direction": "整体低估 22.2"
+      }
     }
   ]
 }
