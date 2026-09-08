@@ -1,7 +1,7 @@
 /* 广东电力日前电价 PWA · service worker
    页面导航与 data.json 走 network-first，静态依赖走 cache-first。
    改版时把 VER 加一位；新 SW 激活后旧壳不再长期滞留。 */
-const VER = 'gdpower-v15';
+const VER = 'gdpower-v16';
 const SHELL = [
   './',
   './index.html',
@@ -34,11 +34,12 @@ self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
 
   // 页面导航：network-first。已安装 PWA 每次重新打开都优先拿最新 HTML，离线才退回壳缓存。
-  // no-store：绕过浏览器 HTTP 缓存层，否则 fetch() 仍可能被 Cache-Control 命中，"network-first" 名不副实。
+  // 注意：SW 内绝不能加 {cache:'no-store'}/{cache:'reload'}——WebKit 兼容问题，曾在 zjpower 上
+  // 导致手机 Safari 报「暂时无法载入数据」的硬失败（v6 回归，见 zjpower-pages commit 2606791）。
   if (e.request.mode === 'navigate' ||
       (url.origin === location.origin && (url.pathname.endsWith('/') || url.pathname.endsWith('/index.html')))) {
     e.respondWith(
-      fetch(e.request, { cache: 'no-store' }).then(resp => {
+      fetch(e.request).then(resp => {
         const copy = resp.clone();
         caches.open(VER).then(c => c.put('./index.html', copy));
         return resp;
@@ -47,12 +48,12 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // data.json：network-first，拿到就更新缓存，失败回退缓存
-  // no-store：GitHub Pages 给 data.json 设了 Cache-Control: max-age=600，不加 no-store 会在 10 分钟窗口内
-  // 直接命中浏览器 HTTP 缓存返回旧数据，SW 逻辑上的 network-first 被 HTTP 缓存层截胡。
+  // data.json：network-first。页面侧已带 ?t= 时间戳兜住 HTTP 缓存（GitHub Pages 给 data.json 设了
+  // Cache-Control: max-age=600），这里不再叠 no-store（WebKit 的 SW 雷区，理由同上）。
+  // 失败时先回退上次缓存；缓存也没有时，最后再走一次普通网络，绝不用 Response.error() 假摔成 Failed to fetch。
   if (url.pathname.endsWith('/data.json')) {
     e.respondWith(
-      fetch(e.request, { cache: 'no-store' }).then(resp => {
+      fetch(e.request).then(resp => {
         if (!resp.ok) throw new Error('HTTP ' + resp.status);
         const copy = resp.clone();
         caches.open(VER).then(c => c.put('./data.json', copy));
