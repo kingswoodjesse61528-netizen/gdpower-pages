@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-12T16:00:52",
+    "generated_at": "2026-09-12T16:09:41",
     "machine": "Air",
     "data_date": "2026-09-12",
     "pred_date": "2026-09-13"
@@ -195,17 +195,6 @@
   },
   "accuracy": {
     "records": [
-      {
-        "date": "2026-08-13",
-        "mae": 43.87,
-        "mape": 8.64,
-        "peak_error": 303.05,
-        "valley_error": 2.7,
-        "status": "正常",
-        "rmae": 0.854,
-        "smape": 9.14,
-        "coverage": 0.6667
-      },
       {
         "date": "2026-08-14",
         "mae": 47.46,
@@ -524,12 +513,24 @@
         "rmae": 0.838,
         "smape": 12.48,
         "coverage": 0.9167
+      },
+      {
+        "date": "2026-09-12",
+        "mae": 39.25,
+        "mape": 9.41,
+        "peak_error": 80.83,
+        "valley_error": 5.98,
+        "status": "正常",
+        "rmae": 1.059,
+        "smape": 9.99,
+        "coverage": 0.7917,
+        "forecast_origin": "retrospective_reconstruction"
       }
     ],
     "summary": {
-      "avg_mae_30": 38.5,
-      "avg_mae_7": 38.6,
-      "avg_rmae_7": 0.908,
+      "avg_mae_30": 38.4,
+      "avg_mae_7": 40.0,
+      "avg_rmae_7": 0.936,
       "best_day": "2026-08-26",
       "best_mae": 15.8,
       "worst_day": "2026-08-16",
@@ -741,6 +742,37 @@
         442.2,
         398.5
       ]
+    },
+    {
+      "date": "2026-09-12",
+      "avg": 362.0,
+      "prices": [
+        429.2,
+        378.1,
+        372.5,
+        359.8,
+        353.6,
+        360.7,
+        364.0,
+        361.0,
+        373.3,
+        374.0,
+        296.0,
+        239.8,
+        232.1,
+        250.5,
+        298.1,
+        341.6,
+        382.7,
+        419.3,
+        412.5,
+        470.7,
+        438.7,
+        413.4,
+        396.0,
+        370.3
+      ],
+      "forecast_origin": "retrospective_reconstruction"
     },
     {
       "date": "2026-09-13",
@@ -1588,6 +1620,171 @@
         "bias": 45.1,
         "grade": "良",
         "direction": "整体高估 45.1"
+      }
+    },
+    {
+      "date": "2026-09-12",
+      "hours": [
+        {
+          "hour": 0,
+          "pred": 429.2,
+          "actual": 466.7
+        },
+        {
+          "hour": 1,
+          "pred": 378.1,
+          "actual": 447.2
+        },
+        {
+          "hour": 2,
+          "pred": 372.5,
+          "actual": 427.9
+        },
+        {
+          "hour": 3,
+          "pred": 359.8,
+          "actual": 402.7
+        },
+        {
+          "hour": 4,
+          "pred": 353.6,
+          "actual": 384.5
+        },
+        {
+          "hour": 5,
+          "pred": 360.7,
+          "actual": 381.2
+        },
+        {
+          "hour": 6,
+          "pred": 364.0,
+          "actual": 384.6
+        },
+        {
+          "hour": 7,
+          "pred": 361.0,
+          "actual": 374.1
+        },
+        {
+          "hour": 8,
+          "pred": 373.3,
+          "actual": 379.3
+        },
+        {
+          "hour": 9,
+          "pred": 374.0,
+          "actual": 362.8
+        },
+        {
+          "hour": 10,
+          "pred": 296.0,
+          "actual": 287.9
+        },
+        {
+          "hour": 11,
+          "pred": 239.8,
+          "actual": 285.0
+        },
+        {
+          "hour": 12,
+          "pred": 232.1,
+          "actual": 224.7
+        },
+        {
+          "hour": 13,
+          "pred": 250.5,
+          "actual": 278.1
+        },
+        {
+          "hour": 14,
+          "pred": 298.1,
+          "actual": 327.1
+        },
+        {
+          "hour": 15,
+          "pred": 341.6,
+          "actual": 366.4
+        },
+        {
+          "hour": 16,
+          "pred": 382.7,
+          "actual": 463.5
+        },
+        {
+          "hour": 17,
+          "pred": 419.3,
+          "actual": 497.0
+        },
+        {
+          "hour": 18,
+          "pred": 412.5,
+          "actual": 471.6
+        },
+        {
+          "hour": 19,
+          "pred": 470.7,
+          "actual": 519.2
+        },
+        {
+          "hour": 20,
+          "pred": 438.7,
+          "actual": 478.6
+        },
+        {
+          "hour": 21,
+          "pred": 413.4,
+          "actual": 473.0
+        },
+        {
+          "hour": 22,
+          "pred": 396.0,
+          "actual": 461.6
+        },
+        {
+          "hour": 23,
+          "pred": 370.3,
+          "actual": 432.0
+        }
+      ],
+      "metrics": {
+        "mae": 39.3,
+        "mape": 9.4,
+        "mxh": 16,
+        "mxd": 80.8,
+        "pred_avg": 362.0,
+        "act_avg": 399.0,
+        "bias": -37.0,
+        "grade": "优",
+        "direction": "整体低估 37.0"
+      },
+      "forecast_origin": "retrospective_reconstruction"
+    }
+  ],
+  "reconstructions": [
+    {
+      "date": "2026-09-12",
+      "kind": "retrospective_reconstruction",
+      "generated_at": "2026-09-12T16:09:41.519009",
+      "history_cutoff": "2026-09-11 23:00:00",
+      "model_trained_at": "2026-09-09T18:00:29.118247",
+      "boundary": "synthetic_from_prior_day; original vintage unavailable",
+      "original_archive_found": false,
+      "note": "事后回补，非当时发布的原始预测；历史数据未验证发布时点版本。",
+      "model_hashes": {
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/xgb_model.pkl": "27c17eec180e043f1518fb7e11ccab1f54e5f7db218deadf0d161d6dacc03b6b",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/lgb_weighted.pkl": "e5f7ef6469b4d9c4fc4fdde84135a02c2c950ddf59726644940d72c752ac3cd8",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/lgb_quantile_p05.pkl": "fb675872dbcb147d279763fb016f5a8c88ddf256489211ddfde683c528f7d9dc",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/lgb_quantile_p10.pkl": "edd98810e0184fac438efa530c9dfd38d4a89729796acfd0f53fe84ea0eacb74",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/clf_neg_price.pkl": "bfbcae64c8e2b934b217384a05943c9818a514b8887077f5c6aa8e3d359ed818",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/xgb_weighted.pkl": "a65e7022a4109802d77defb84ed843ef36f639a084e19b47273724681ab8ebe4",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/lgb_quantile_p95.pkl": "7f12eb265ea3d5868abd6d8b5f1b36bb44d87520b1eaa3a599b1b8fbcd66549a",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/lgb_model.pkl": "043f00ec57baeeffd0ab4f964a6cf7a0c217ffb7932a9f944f1d1712be050a7d",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/lgb_quantile_p90.pkl": "2680c6f167aca0a797b3e87753599bb14be4a00a76f494796f5ed449d7dd7613",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/reg_neg_price.pkl": "54c3b140b818fa4b7418142f4e904641ed60b4a57ba959c11f242a75cc7d1273",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/lgb_quantile_p50.pkl": "734701dcd8fa8cee6aec8713e63a60dc20b98af0f433aa3f1b20a65cee4f9409",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/model_meta_v2.json": "44687081d2b617362975fae98c3dd175e9f09ba6be633933219f886fc7adca47",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/model_meta_quantile_v2.json": "a8e50f009e01196ab83ba32c0243ffe2a5e83c855e83ef560192afcc2a16e4fb",
+        "/Users/hydtzyj/Documents/AI应用系统/广东电力市场电价预测系统/模型训练/models/model_meta.json": "a4e8b9346acaef610a7750176b0edbb16038377f3c593c5d8cd093539812eb6f"
       }
     }
   ]
