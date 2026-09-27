@@ -372,6 +372,17 @@
         "coverage": null
       },
       {
+        "date": "2026-09-20",
+        "mae": 62.62,
+        "mape": 10.51,
+        "peak_error": 177.53,
+        "valley_error": 2.01,
+        "status": "注意",
+        "rmae": 0.396,
+        "smape": 11.33,
+        "coverage": 0.6667
+      },
+      {
         "date": "2026-09-22",
         "mae": 37.68,
         "mape": 5.99,
