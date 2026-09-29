@@ -439,10 +439,10 @@
       },
       {
         "date": "2026-09-26",
-        "mae": 157.99,
-        "mape": 24.96,
-        "peak_error": 386.63,
-        "valley_error": 4.96,
+        "mae": 155.02,
+        "mape": 24.74,
+        "peak_error": 376.03,
+        "valley_error": 4.36,
         "status": "退化",
         "rmae": 1.397,
         "smape": 30.19,
@@ -533,7 +533,7 @@
       "best_day": "2026-09-16",
       "best_mae": 16.14,
       "worst_day": "2026-09-26",
-      "worst_mae": 157.99,
+      "worst_mae": 155.02,
       "model_status": "退化"
     }
   },
