@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-29T22:53:18",
+    "generated_at": "2026-09-29T22:56:37",
     "machine": "Air",
     "data_date": "2026-09-29",
     "pred_date": "2026-09-30"
@@ -204,7 +204,7 @@
         "status": "正常",
         "rmae": 1.145,
         "smape": 8.5,
-        "coverage": null
+        "coverage": 0.4167
       },
       {
         "date": "2026-08-31",
@@ -215,7 +215,7 @@
         "status": "正常",
         "rmae": 0.955,
         "smape": 10.8,
-        "coverage": null
+        "coverage": 0.4167
       },
       {
         "date": "2026-09-01",
@@ -226,7 +226,7 @@
         "status": "正常",
         "rmae": 0.875,
         "smape": 14.27,
-        "coverage": null
+        "coverage": 0.2083
       },
       {
         "date": "2026-09-02",
@@ -237,7 +237,7 @@
         "status": "正常",
         "rmae": 0.999,
         "smape": 11.43,
-        "coverage": null
+        "coverage": 0.6667
       },
       {
         "date": "2026-09-03",
@@ -248,7 +248,7 @@
         "status": "正常",
         "rmae": 0.949,
         "smape": 12.66,
-        "coverage": null
+        "coverage": 0.5417
       },
       {
         "date": "2026-09-04",
@@ -259,7 +259,7 @@
         "status": "注意",
         "rmae": 1.155,
         "smape": 19.67,
-        "coverage": null
+        "coverage": 0.1667
       },
       {
         "date": "2026-09-05",
@@ -270,7 +270,7 @@
         "status": "正常",
         "rmae": 0.864,
         "smape": 7.41,
-        "coverage": null
+        "coverage": 0.7917
       },
       {
         "date": "2026-09-06",
@@ -281,7 +281,7 @@
         "status": "正常",
         "rmae": 0.696,
         "smape": 12.01,
-        "coverage": null
+        "coverage": 0.375
       },
       {
         "date": "2026-09-07",
@@ -292,7 +292,7 @@
         "status": "正常",
         "rmae": 0.47,
         "smape": 8.71,
-        "coverage": null
+        "coverage": 0.6667
       },
       {
         "date": "2026-09-08",
@@ -303,7 +303,7 @@
         "status": "正常",
         "rmae": 1.31,
         "smape": 7.95,
-        "coverage": null
+        "coverage": 0.9167
       },
       {
         "date": "2026-09-09",
@@ -314,7 +314,7 @@
         "status": "正常",
         "rmae": 1.36,
         "smape": 7.47,
-        "coverage": null
+        "coverage": 0.625
       },
       {
         "date": "2026-09-10",
@@ -325,7 +325,7 @@
         "status": "正常",
         "rmae": 0.82,
         "smape": 8.04,
-        "coverage": null
+        "coverage": 1.0
       },
       {
         "date": "2026-09-11",
@@ -336,7 +336,7 @@
         "status": "正常",
         "rmae": 0.838,
         "smape": 12.48,
-        "coverage": null
+        "coverage": 0.9167
       },
       {
         "date": "2026-09-12",
@@ -347,7 +347,7 @@
         "status": "正常",
         "rmae": 1.059,
         "smape": 9.99,
-        "coverage": null
+        "coverage": 0.7917
       },
       {
         "date": "2026-09-13",
@@ -358,7 +358,7 @@
         "status": "正常",
         "rmae": 0.667,
         "smape": 6.12,
-        "coverage": null
+        "coverage": 0.875
       },
       {
         "date": "2026-09-14",
@@ -369,7 +369,7 @@
         "status": "退化",
         "rmae": 1.691,
         "smape": 17.48,
-        "coverage": null
+        "coverage": 0.5417
       },
       {
         "date": "2026-09-15",
@@ -380,7 +380,7 @@
         "status": "正常",
         "rmae": 1.355,
         "smape": 6.35,
-        "coverage": null
+        "coverage": 1.0
       },
       {
         "date": "2026-09-16",
@@ -391,7 +391,7 @@
         "status": "正常",
         "rmae": 0.728,
         "smape": 3.63,
-        "coverage": null
+        "coverage": 1.0
       },
       {
         "date": "2026-09-17",
@@ -402,7 +402,7 @@
         "status": "正常",
         "rmae": 1.623,
         "smape": 6.76,
-        "coverage": null
+        "coverage": 0.9583
       },
       {
         "date": "2026-09-18",
@@ -413,7 +413,7 @@
         "status": "正常",
         "rmae": 1.448,
         "smape": 6.94,
-        "coverage": null
+        "coverage": 0.9167
       },
       {
         "date": "2026-09-19",
@@ -424,7 +424,7 @@
         "status": "注意",
         "rmae": 0.543,
         "smape": 12.89,
-        "coverage": null
+        "coverage": 0.6667
       },
       {
         "date": "2026-09-20",
@@ -435,7 +435,7 @@
         "status": "注意",
         "rmae": 0.396,
         "smape": 11.33,
-        "coverage": null
+        "coverage": 0.6667
       },
       {
         "date": "2026-09-22",
@@ -446,7 +446,7 @@
         "status": "正常",
         "rmae": 0.883,
         "smape": 6.25,
-        "coverage": null
+        "coverage": 0.875
       },
       {
         "date": "2026-09-23",
@@ -457,7 +457,7 @@
         "status": "正常",
         "rmae": 1.146,
         "smape": 9.79,
-        "coverage": null
+        "coverage": 0.9167
       },
       {
         "date": "2026-09-24",
@@ -479,7 +479,7 @@
         "status": "退化",
         "rmae": 1.099,
         "smape": 34.51,
-        "coverage": null
+        "coverage": 0.2917
       },
       {
         "date": "2026-09-26",
@@ -490,7 +490,7 @@
         "status": "退化",
         "rmae": 1.397,
         "smape": 30.19,
-        "coverage": null
+        "coverage": 0.4167
       },
       {
         "date": "2026-09-27",
@@ -501,7 +501,7 @@
         "status": "注意",
         "rmae": 0.841,
         "smape": 10.11,
-        "coverage": null
+        "coverage": 0.8333
       },
       {
         "date": "2026-09-28",
@@ -512,7 +512,7 @@
         "status": "退化",
         "rmae": 0.979,
         "smape": 22.73,
-        "coverage": null
+        "coverage": 0.125
       },
       {
         "date": "2026-09-29",
@@ -523,7 +523,7 @@
         "status": "退化",
         "rmae": 1.347,
         "smape": 18.82,
-        "coverage": null
+        "coverage": 0.2083
       }
     ],
     "summary": {
