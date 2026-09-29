@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-29T22:56:37",
+    "generated_at": "2026-09-29T23:20:42",
     "machine": "Air",
     "data_date": "2026-09-29",
     "pred_date": "2026-09-30"
@@ -324,7 +324,7 @@
         "valley_error": 5.37,
         "status": "正常",
         "rmae": 0.82,
-        "smape": 8.04,
+        "smape": 7.8,
         "coverage": 1.0
       },
       {
@@ -356,7 +356,7 @@
         "peak_error": 66.34,
         "valley_error": 0.62,
         "status": "正常",
-        "rmae": 0.667,
+        "rmae": 0.668,
         "smape": 6.12,
         "coverage": 0.875
       },
@@ -367,7 +367,7 @@
         "peak_error": 164.72,
         "valley_error": 0.76,
         "status": "退化",
-        "rmae": 1.691,
+        "rmae": 1.692,
         "smape": 17.48,
         "coverage": 0.5417
       },
@@ -510,7 +510,7 @@
         "peak_error": 242.48,
         "valley_error": 15.64,
         "status": "退化",
-        "rmae": 0.979,
+        "rmae": 2.04,
         "smape": 22.73,
         "coverage": 0.125
       },
@@ -529,7 +529,7 @@
     "summary": {
       "avg_mae_30": 54.4,
       "avg_mae_7": 98.8,
-      "avg_rmae_7": 1.081,
+      "avg_rmae_7": 1.233,
       "best_day": "2026-09-16",
       "best_mae": 16.14,
       "worst_day": "2026-09-26",
