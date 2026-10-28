@@ -578,7 +578,11 @@
       },
       {
         "name": "hour_cos",
-        "weight": 0.0396
+        "weight": 0.0419
+      },
+      {
+        "name": "hour",
+        "weight": 0.0398
       },
       {
         "name": "日前B类负荷",
