@@ -499,9 +499,9 @@
         "peak_error": 105.09,
         "valley_error": 12.02,
         "status": "正常",
-        "rmae": 1.424,
-        "smape": 11.91,
-        "coverage": 0.9167
+        "rmae": 1.428,
+        "smape": 11.99,
+        "coverage": 0.5417
       },
       {
         "date": "2026-10-30",
