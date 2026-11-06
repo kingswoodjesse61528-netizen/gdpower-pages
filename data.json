@@ -505,20 +505,31 @@
       },
       {
         "date": "2026-11-05",
-        "mae": 93.55,
-        "mape": 13.56,
-        "peak_error": 165.34,
-        "valley_error": 21.57,
+        "mae": 96.51,
+        "mape": 13.93,
+        "peak_error": 166.34,
+        "valley_error": 26.4,
         "status": "退化",
-        "rmae": 2.455,
-        "smape": 14.68,
-        "coverage": 0.1667
+        "rmae": 2.533,
+        "smape": 15.12,
+        "coverage": 0.0833
+      },
+      {
+        "date": "2026-11-06",
+        "mae": 34.13,
+        "mape": 5.73,
+        "peak_error": 102.4,
+        "valley_error": 1.1,
+        "status": "正常",
+        "rmae": 0.409,
+        "smape": 5.67,
+        "coverage": 0.7917
       }
     ],
     "summary": {
-      "avg_mae_30": 70.9,
-      "avg_mae_7": 84.5,
-      "avg_rmae_7": 1.406,
+      "avg_mae_30": 68.3,
+      "avg_mae_7": 81.1,
+      "avg_rmae_7": 1.291,
       "best_day": "2026-10-28",
       "best_mae": 21.83,
       "worst_day": "2026-10-13",
@@ -544,11 +555,7 @@
       },
       {
         "name": "price_lag24",
-        "weight": 0.1313
-      },
-      {
-        "name": "hour",
-        "weight": 0.0412
+        "weight": 0.1329
       },
       {
         "name": "hour_cos",
